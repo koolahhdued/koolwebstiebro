@@ -3,4 +3,213 @@ body{
     color: white;
     font-family: 'FONTSTUCK', monospace;
 
+}.box{
+    border: dashed ;
+    text-align: center;
+     cursor: pointer;
+    border-width: 5px;       /* thicker border on hover */
+    border-style: dashed;
 }
+.box:hover{
+    color: #189bcc;
+    font-weight: bold;
+    border-width: 8px;
+animation: floaty 2s ease-in-out infinite;
+}
+.container{
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+}
+.nohover{
+    border: dashed;
+    text-align: center;
+}
+.otherbox{
+    border: dashed white;
+    text-align: center;
+     cursor: pointer;
+    border-width: 5px;       /* thicker border on hover */
+    border-style: dashed;
+    color: white;
+}
+.otherbox:hover{
+    color: #189bcc;
+    font-weight: bold;
+    border-width: 5px;
+    border: dashed #189BCC;
+ animation: floaty 2s ease-in-out infinite ;
+}
+a {
+     /* removes the underline */
+    color: white;        
+}
+
+a:visited {
+    color: white;        /* removes the purple */
+    text-decoration: none;
+}
+
+.floaty-box {
+  display: inline-block;
+  padding: 20px;
+  background: black;
+  color: white;
+  border: 2px dashed white;
+  animation: floaty 2s ease-in-out infinite;
+}
+.floaty-box:hover{
+   background-image: linear-gradient(to right, blue, red);
+}
+
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);   /* start and end = normal spot */
+  }
+  50% {
+    transform: translateY(-5px); /* halfway = move up 15px */
+  }
+}
+#typewriter-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 50px; /* Adjust as needed */
+  font-family:'FONTSTUCK', monospace;
+  font-size: 1.2em;
+}
+
+#typed-text {
+  overflow: hidden; /* Hide content until revealed */
+  white-space: nowrap; /* Keep text on a single line */
+}
+
+#cursor {
+  animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+.small-pic {
+  /* Sets a fixed size */
+  width: 750px;
+  height: 100px; /* Keeps the proportions */
+}
+
+/* style.css */
+
+/* 1. Base style for the image */
+.flipper-image {
+    /* Set size and appearance (Adjust as needed) */
+    width: 200px;
+    height: auto;
+    display: block; /* Important for alignment */
+    margin: 50px auto; /* Centers the image */
+    transition: transform 0.5s ease-out; /* Smooth stop/start */
+    cursor: pointer; /* Indicates it's clickable */
+  animation: spin 5s infinite;
+    animation-duration: 5s; /* Takes 2 seconds for one full spin */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; /* Keeps spinning forever */
+
+}
+
+/* 2. The Animation Keyframes */
+/* This defines what the "spin" animation looks like */
+@keyframes spin {
+  from {
+    transform: rotateY(0deg); /* Start at 0 degrees (front-facing) */
+  }
+  to {
+    transform: rotateY(360deg); /* End at 360 degrees (one full rotation) */
+  }}
+#myTextBox {
+    padding: 8px;
+    width: 200px;border: dashed ;
+    text-align: center;
+     cursor: pointer;
+    border-width: 5px;       /* thicker border on hover */
+  
+   
+
+}
+#plainTextContainer {
+  font-family: 'Comic Sans MS', cursive, sans-serif;  /* your preferred font */
+  font-size: 1.5em;            /* bigger text */
+  color: white;       text-align: center;          /* center horizontally */
+  margin: 20px auto;           /* space around */
+  padding: 10px 20px;          /* some padding */
+  border:  dashed white;    /* border to match your theme */
+  background-color: rgba(0, 0, 0, 0.7);  /* semi-transparent background */
+  border-radius: 8px;          /* rounded corners */
+  max-width: 400px;            /* optional: limit width */
+  transition: color 0.3s ease; /* smooth color changes if needed */
+  animation: floaty 2s ease-in-out infinite; 
+ text-shadow: 0 0 10px white, /* Horizontal offset, vertical offset, blur radius, color */
+                   0 0 20px white,
+                   0 0 30px white;/* show pointer */
+
+}
+
+/* Optional: change color on hover */
+#plainTextContainer:hover {
+  cursor: pointer;
+     text-shadow: 0 0 10px white, /* Horizontal offset, vertical offset, blur radius, color */
+                   0 0 20px white,
+                   0 0 30px white;/* show pointer */
+   animation: floaty 2s ease-in-out infinite;                  
+}
+
+#textBoxContainer{
+     font-family:'FONTSTUCK', monospace, cursive, sans-serif;  /* your preferred font */
+  font-size: 1.5em;            /* bigger text */             /* bright yellow */
+  text-align: center;          /* center horizontally */
+  margin: 20px auto;           /* space around */
+  padding: 10px 20px;          /* some padding */
+  border: 2px dashed white;    /* border to match your theme */
+  background-color: rgba(0, 0, 0, 0.7);  /* semi-transparent background */
+  border-radius: 8px;          /* rounded corners */
+  max-width: 400px;            /* optional: limit width */
+  transition: color 0.3s ease; /* smooth col */
+ cursor: pointer;
+     text-shadow: 0 0 10px white, /* Horizontal offset, vertical offset, blur radius, color */
+                   0 0 20px white,
+                   0 0 30px white;/* show pointer */
+   animation: floaty 2s ease-in-out infinite;         
+
+}
+.popup-content {
+  display: none; /* Initially hidden */
+  position: fixed; /* Fixed position relative to the viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the pop-up */
+  background-color: black;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Optional: Overlay to dim the background */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
+}
+button{
+    text-shadow: 0 0 50px white, /* Horizontal offset, vertical offset, blur radius, color */
+                   0 0 50px white,
+                   0 0 50px white;/* show pointer */
+}
+
+button:hover{
+    transform: scale(1);
+}
+
