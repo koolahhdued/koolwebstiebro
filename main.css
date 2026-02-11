@@ -24,6 +24,7 @@ animation: floaty 2s ease-in-out infinite;
 .nohover{
     border: dashed;
     text-align: center;
+    padding: auto;
 }
 .otherbox{
     border: dashed white;
