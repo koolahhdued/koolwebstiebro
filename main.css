@@ -214,3 +214,7 @@ button:hover{
     transform: scale(1);
 }
 
+.muzik_box{
+    border: white dashed;
+    justify-content: flex-end;
+}
