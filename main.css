@@ -218,3 +218,21 @@ button:hover{
     border: white dashed;
     justify-content: flex-end;
 }
+.kool_thing {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  position: relative; /* Essential for 'left' property to work */
+  animation: bounce 2s infinite alternate ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    left: 0; /* Start position (left side) */
+    transform: translateY(0);
+  }
+  100% {
+    left: calc(100% - 100px); /* End position (right side, accounting for image width) */
+    transform: translateY(-20px); /* Optional: Adds a slight vertical 'hop' */
+  }
+}
+
