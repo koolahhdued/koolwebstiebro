@@ -233,6 +233,7 @@ button:hover{
     50%{
         left: calc(50% - 50px);
         transform: translateY(0)
+    }
   100% {
     left: calc(100% - 100px); /* End position (right side, accounting for image width) */
     transform: translateY(0); /* Optional: Adds a slight vertical 'hop' */
