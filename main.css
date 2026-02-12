@@ -219,24 +219,23 @@ button:hover{
     justify-content: flex-end;
 }
 .kool_thing {
-  width: 100px; /* Adjust size as needed */
-  height: auto;
-  position: relative; /* Essential for 'left' property to work */
-  animation: bounce 2s infinite alternate ease-in-out;
+  animation-name: bounce;
+  animation-duration: 3s;        /* Adjust speed here */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; /* This stops the snapping/pausing */
+  position: relative;            /* Ensure 'left' actually works */
 }
 
 @keyframes bounce {
   0% {
-    left: 0; /* Start position (left side) */
-    transform: translateY(0);
+    left: 0;
   }
-    50%{
-        left: calc(50% - 50px);
-        transform: translateY(0)
-    }
+  50% {
+    left: calc(50% - 50px);
+  }
   100% {
-    left: calc(100% - 100px); /* End position (right side, accounting for image width) */
-    transform: translateY(0); /* Optional: Adds a slight vertical 'hop' */
+    left: calc(100% - 100px);
   }
 }
+
 
