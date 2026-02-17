@@ -244,6 +244,10 @@ ol{
                    0 0 20px white,
                    0 0 30px white;
     margin-top: 200px;
-    margin-right: 600px;
+    margin-right: 800px;
     margin-bottom: 50px;
+}
+video{
+     border: white dashed;
+    margin: 100px;
 }
