@@ -238,30 +238,10 @@ button:hover{
   }
 }
 
-ol {
-  counter-reset: my-awesome-counter;
-  list-style: none;
-  padding-left: 20px;
+ol{
+    border: white dashed;
+     text-shadow: 0 0 10px white, /* Horizontal offset, vertical offset, blur radius, color */
+                   0 0 20px white,
+                   0 0 30px white;
+    margin: 25px;
 }
-
-ol li {
-  counter-increment: my-awesome-counter;
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 10px;
-}
-
-ol li::before {
-  content: counter(my-awesome-counter);
-  position: absolute;
-  left: 0;
-  background-color: #333; /* Kool background color */
-  color: white;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  line-height: 25px;
-  font-size: 14px;
-}
-
