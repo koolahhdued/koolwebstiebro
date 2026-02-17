@@ -243,6 +243,6 @@ ol{
      text-shadow: 0 0 10px white, /* Horizontal offset, vertical offset, blur radius, color */
                    0 0 20px white,
                    0 0 30px white;
-    margin-top: 250px;
-    margin-right: 100px;
+    margin-top: 600px;
+    margin-right: 250px;
 }
