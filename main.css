@@ -221,7 +221,7 @@ button:hover{
 .kool_thing {
   animation-name: bounce;
   animation-duration: 3s;        /* Adjust speed here */
-  animation-iteration-count: 3s ease-in-out infinite ;
+  animation: floaty 2s ease-in-out infinite;
   animation-timing-function: linear; /* This stops the snapping/pausing */
   position: relative;            /* Ensure 'left' actually works */
 }
