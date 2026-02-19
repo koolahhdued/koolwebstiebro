@@ -136,7 +136,7 @@ a:visited {
 
 }
 #plainTextContainer {
-  font-family: 'Comic Sans MS', cursive, sans-serif;  /* your preferred font */
+  font-family: 'FONTSTUCK', cursive, sans-serif;  /* your preferred font */
   font-size: 1.5em;            /* bigger text */
   color: white;       text-align: center;          /* center horizontally */
   margin: 20px auto;           /* space around */
@@ -247,6 +247,13 @@ ol{
     margin-right: 800px;
     margin-bottom: 50px;
 }
+@font-face {
+  font-family: 'FONTSTUCK';
+  src: url('fontstuck.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 video{
      border: white dashed;
     margin: 100px;
