@@ -292,3 +292,9 @@ video{
      border: white dashed;
     margin: 100px;
 }
+/* CSS for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column; /* Stacks items vertically on small screens */
+  }
+}
