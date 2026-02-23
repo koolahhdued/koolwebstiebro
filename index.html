@@ -146,14 +146,26 @@ GIVE U $5 (rules apply ofc I can't Jst give away money) U WILL GET JUST1C3 AND I
 <!-- PeerJS Library -->
 <script src="https://unpkg.com"></script>
 
-<div id="chat-container">
-  <p>Your ID: <span id="my-id">...</span></p>
-  <input type="text" id="receiver-id" placeholder="Enter friend's ID">
-  <button id="connect-btn">Connect</button>
-  <div id="messages" style="height:200px; border:1px solid #ccc; overflow-y:scroll;"></div>
-  <input type="text" id="message-input" placeholder="Type message">
-  <button id="send-btn">Send</button>
-</div>
+<script src="https://cdn.socket.io"></script>
+<div id="chat-box"></div>
+<input id="input" autocomplete="off"><button onclick="sendMessage()">Send</button>
+
+<script>
+  // Connect to a public test server (Note: Public servers are for testing only!)
+  const socket = io("https://socket-io-chat.now.sh"); 
+
+  socket.on('chat message', (msg) => {
+    const item = document.createElement('p');
+    item.textContent = msg;
+    document.getElementById('chat-box').appendChild(item);
+  });
+
+  function sendMessage() {
+    const input = document.getElementById('input');
+    socket.emit('chat message', input.value);
+    input.value = '';
+  }
+</script>
 
 
 
