@@ -89,6 +89,47 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+const peer = new Peer(); // Generates a random ID for you
+let conn;
+
+// 1. Display your ID so you can share it
+peer.on('open', (id) => {
+  document.getElementById('my-id').innerText = id;
+});
+
+// 2. WAIT for someone to connect to you
+peer.on('connection', (connection) => {
+  conn = connection;
+  setupChat();
+});
+
+// 3. START a connection to someone else
+document.getElementById('connect-btn').onclick = () => {
+  const friendId = document.getElementById('receiver-id').value;
+  conn = peer.connect(friendId);
+  setupChat();
+};
+
+function setupChat() {
+  // Listen for data (messages)
+  conn.on('data', (data) => {
+    appendMessage("Friend: " + data);
+  });
+
+  // Handle sending
+  document.getElementById('send-btn').onclick = () => {
+    const msg = document.getElementById('message-input').value;
+    conn.send(msg);
+    appendMessage("Me: " + msg);
+    document.getElementById('message-input').value = "";
+  };
+}
+
+function appendMessage(text) {
+  const p = document.createElement('p');
+  p.innerText = text;
+  document.getElementById('messages').appendChild(p);
+}
 
 
 
