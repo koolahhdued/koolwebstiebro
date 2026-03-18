@@ -130,18 +130,14 @@ function appendMessage(text) {
   p.innerText = text;
   document.getElementById('messages').appendChild(p);
 }
-// 1. Get references to the elements
-const colorPicker = document.getElementById('colorPicker');
-const colorText = document.getElementById('colorText');
+// Select the elements from the page
+const picker = document.getElementById('colorPicker');
+const text = document.getElementById('targetText');
 
-// 2. Add an event listener to the color picker
-colorPicker.addEventListener('input', function(event) {
-    // 3. The event.target.value contains the newly selected color
-    const newColor = event.target.value;
-    
-    // 4. Update the color of the text element
-    colorText.style.color = newColor; // The MDN Web Docs has more info on the color property
+// Listen for color changes
+picker.addEventListener('input', (event) => {
+  // Update the text color to the value of the color picker
+  text.style.color = event.target.value;
 });
-
 
 
