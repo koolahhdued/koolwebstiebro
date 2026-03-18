@@ -298,3 +298,8 @@ video{
     flex-direction: column; /* Stacks items vertically on small screens */
   }
 }
+#colorText {
+    font-size: 20px;
+    /* Default color */
+    color: #0000ff; 
+}
