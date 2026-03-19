@@ -298,8 +298,3 @@ video{
     flex-direction: column; /* Stacks items vertically on small screens */
   }
 }
-#targetText {
-  font-size: 20px;
-  font-family: sans-serif;
-  transition: color 0.2s ease; /* Smoothly fades from one color to the next */
-}
