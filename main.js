@@ -125,19 +125,3 @@ function setupChat() {
   };
 }
 
-function appendMessage(text) {
-  const p = document.createElement('p');
-  p.innerText = text;
-  document.getElementById('messages').appendChild(p);
-}
-// Select the elements from the page
-const picker = document.getElementById('colorPicker');
-const text = document.getElementById('targetText');
-
-// Listen for color changes
-picker.addEventListener('input', (event) => {
-  // Update the text color to the value of the color picker
-  text.style.color = event.target.value;
-});
-
-
