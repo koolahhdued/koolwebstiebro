@@ -298,3 +298,7 @@ video{
     flex-direction: column; /* Stacks items vertically on small screens */
   }
 }
+.erisol{
+    color: #4ac925;
+    font-family: Courier Standard Bold;
+}
